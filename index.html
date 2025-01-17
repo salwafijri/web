@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 30px;
+            color: #1d0e55; /* Warna teks utama */
+            text-align: center;
+            background-color: #FFFFFF;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 50px;
+            background: #ffffff; /* Latar belakang kontainer */
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(236, 233, 233, 0.3);
+            color: #1b0105; /* Warna teks di dalam kontainer */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(225, 223, 236, 0.8); /* Warna navbar */
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: black;
+            background-color: #FFC2D6; /* Warna tombol navbar */
+            text-decoration: none;
+            margin: 0 1em;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #fed809; /* Warna hover tombol */
+            color: black;* Warna teks hover */
+        }
+
+        .section {
+            display: none;
+            padding: 2em;
+            text-align: center;
+            color: rgb(241, 232, 232);
+        }
+
+        .section h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: black; /* Warna judul */
+            text-shadow: 0 4px 10px rgb(250, 245, 250, 245);
+        }
+
+        .section p {
+            font-size: 0.9em;
+            line-height: 1.8;
+            color: #1C1C26; /* Warna paragraf */
+        }
+
+        #home, #about, #my-page {
+            border-radius: 10px;
+            background-color: #A4C7FF;
+            padding: 2em;
+            box-shadow: 0px 0px 30px rgb(30, 30, 31);
+            backdrop-filter: blur(2px);
+            border: 0px solid rgba(238, 238, 243, 0.808);
+        }
+
+        .section a {
+            color: #cfdce4;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .section a:hover {
+            color: #ba3c54;
+        }
+
+        .section a.medium-logo {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://img.icons8.com/?size=100&id=m8ClhVaNuUH7&format=png&color=000000');
+            background-size: cover;
+            background-position: center;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 0em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #FFEB59;
+        }
+
+        .section a.medium-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(14, 0, 3, 0.993);
+        }
+
+        #my-page div {
+            display: flex; /* Menggunakan flexbox */
+            justify-content: center; /* Pusatkan secara horizontal */
+            align-items: center;
+            flex-direction: column; /* Pastikan elemen dalam ditumpuk ke bawah */
+            min-height: 50px; /* Tinggi minimum, agar div cukup besar */
+            width: 100%; /* Sesuaikan lebar container */
+        }
+
+        #my-page div p {
+            box-shadow: 3px 3px 3px 3px rgba(14, 0, 3, 0.993); /* Gaya shadow */
+            background-color: rgba(225, 223, 236, 0.8);
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 1em;
+            margin-top: 2em;;
+        }
+
+        .section a.github-logo {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://img.icons8.com/?size=100&id=118553&format=png&color=000000');
+            background-size: cover;
+            background-position: center;
+            margin-top: 1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #FFEB59;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 0em;
+        }
+
+        .section a.github-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About Me</a>
+        <a onclick="showSection('my-page')">My Page</a>
+    </div>
+
+    <div id="home" class="section">
+        <h1>Welcome to Salwa's Page!</h1>
+        <p>This is the home section of my page. Feel free to explore and know more about me!</p>
+    </div>
+
+    <div id="about" class="section">
+        <h1>Hello! I'm Salwa Fijri</h1>
+        <p>An Information Technology Student and a passionate individual who loves technology and innovation. I am committed to learning and exploring new ideas about technology</p>
+    </div>
+
+    <div id="my-page" class="section">
+        <h1>Where can you reach me?</h1>
+        <p>Here, you will find detailed information about my simple projects and what i've learned in my major.</p>
+        <div>
+            <p>Check out my Medium:</p>
+            <a href="https://medium.com/@fijrisalwa" class="medium-logo" target="_blank"></a>
+        </div>
+        <div>
+            <p>Check out my GitHub:</p>
+            <a href="https://github.com/salwafijri" class="github-logo" target="_blank"></a>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // Default to show the home section on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+
+</body>
+</html>
